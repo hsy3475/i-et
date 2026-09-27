@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>i'et</title>
+    <meta name="description" content="웰니스 브랜드 i'et의 메인 랜딩페이지" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--=============== gnb ================-->
+
+    <div class="nav">
+      <div class="wrap nav-row">
+        <a class="logo" href="#top"><img src="logo_white.png" alt="i'et" /></a>
+        <ul class="nav-links">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#products">PRODUCTS</a></li>
+          <li><a href="#wellness">WELLNESS</a></li>
+          <li><a href="#community">COMMUNITY</a></li>
+        </ul>
+        <div class="nav-actions">
+          <!-- 수정 ⭐ id 추가 (script.js에서 검색창 열 때 사용) -->
+          <button
+            class="icon-btn"
+            id="search-open"
+            aria-label="검색"
+            aria-controls="search-overlay"
+            aria-expanded="false"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <button class="icon-btn" aria-label="장바구니">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L22 7H6"
+              ></path>
+              <circle cx="9" cy="21" r="1.4"></circle>
+              <circle cx="18" cy="21" r="1.4"></circle>
+            </svg>
+          </button>
+          <button class="icon-btn" aria-label="마이페이지">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"></path>
+            </svg>
+          </button>
+          <button
+            id="menu-toggle"
+            class="icon-btn"
+            aria-label="메뉴 열기"
+            aria-expanded="false"
+            aria-controls="menu-panel"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="4" y1="7" x2="20" y2="7"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="17" x2="14" y2="17"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="menu-panel" id="menu-panel">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#products">PRODUCTS</a></li>
+          <li><a href="#wellness">WELLNESS</a></li>
+          <li><a href="#community">COMMUNITY</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- =========== 검색창 오버레이 ⭐ 추가 =============== -->
+    <div
+      class="search-overlay"
+      id="search-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="사이트 검색"
+      aria-hidden="true"
+    >
+      <button class="search-close" id="search-close" aria-label="검색창 닫기">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+          <line x1="5" y1="5" x2="19" y2="19"></line>
+          <line x1="19" y1="5" x2="5" y2="19"></line>
+        </svg>
+      </button>
+      <form class="search-form" id="search-form" role="search">
+        <input
+          type="search"
+          class="search-input"
+          id="search-input"
+          name="q"
+          placeholder="검색어를 입력하세요."
+          autocomplete="off"
+        />
+        <button type="submit" class="search-submit" aria-label="검색하기">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- ===========메인배너=============== -->
+
+    <main id="top">
+      <section class="hero" id="about">
+        <div class="hero-blob one"></div>
+        <div class="hero-blob two"></div>
+        <div class="wrap hero-grid">
+          <div>
+            <span class="badge"
+              ><span class="dot"></span> 2030 WELLNESS LIFESTYLE</span
+            >
+            <h1>건강한 나를 마주하는<br />가벼운 시작, <em>i'et</em></h1>
+            <p>
+              나를 억누르는 강박은 비우고, <br />내 안의 아름다운 밸런스를
+              채우세요.
+            </p>
+            <a class="btn btn-primary" href="#products">나만의 밸런스 찾기 →</a>
+          </div>
+          <div class="hero-visual">
+            <div class="bottle">
+              <img src="bottle3.png" alt="Calori-et 가르시니아 900" />
+            </div>
+            <div class="bottle-text">Calori-et 가르시니아 900</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================브랜드소개============ -->
+      <section class="philosophy">
+        <div class="wrap">
+          <div class="section-head center">
+            <span class="eyebrow">Brand Philosophy</span>
+            <h2>왜 i'et 일까요?</h2>
+            <p>
+              'DIET'에서 단기 감성의 강박인 'D'는 비우고, 온전히 '나(I)'에
+              집중합니다. 억지로 참는 다이어트가 아닌, 나에게 맞는 균형을 찾는
+              여정이 i'et의 시작입니다.
+            </p>
+          </div>
+          <div class="phil-grid">
+            <div class="phil-card">
+              <span class="num">01</span>
+              <h3>Light Mind</h3>
+              <p>무거운 강박 대신 가벼운 자존감을 채우는 마인드 케어.</p>
+            </div>
+            <div class="phil-card">
+              <span class="num">02</span>
+              <h3>Smart Balance</h3>
+              <p>원료부터 까다롭게 선택한 스마트한 웰니스 케어.</p>
+            </div>
+            <div class="phil-card">
+              <span class="num">03</span>
+              <h3>Daily Glow</h3>
+              <p>매일 지속할 수 있는 즐거운 루틴으로 완성하는 데일리 글로우.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--================= 상품리스트======================== -->
+
+    <section class="products" id="products">
+  <div class="wrap">
+    <div class="prod-head">
+      <div>
+        <span class="eyebrow">Featured Lineup</span>
+        <h2 style="font-size: 1.9rem; font-weight: 700; margin-top: 12px; color: #ed6618">
+          Calori-et 라인업
+        </h2>
+      </div>
+      <div
+        class="tabs"
+        role="tablist"
+        aria-label="제품 선택"
+        id="tabs"
+      ></div>
+    </div>
+    <!-- 수정 ⭐ 카드 내용(이미지 + a태그 포함)은 script.js의 renderCard()가 채워줌 -->
+    <div class="prod-card" id="prod-card"></div>
+  </div>
+</section>
+
+      <!-- ===================== 웰니스 루틴 ======================= -->
+
+            <section class="magazine" id="wellness">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Routine &amp; Magazine</span>
+            <h2>가볍게 이어가는 웰니스 루틴</h2>
+          </div>
+          <div class="mag-grid">
+            <a class="mag-card" href="#">
+              <div class="mag-thumb">
+                <img
+                  class="fill"
+                  src="01.png"
+                  alt="바쁜 직장인을 위한 가벼운 아침 10분 루틴"
+                  loading="lazy"
+                />
+                <span class="tag">ROUTINE</span>
+              </div>
+              <span class="mag-meta">MORNING ROUTINE</span>
+              <span class="mag-title"
+                >바쁜 직장인을 위한 가벼운 아침 10분 루틴</span
+              >
+            </a>
+            <a class="mag-card" href="#">
+              <div class="mag-thumb">
+                <img
+                  class="fill"
+                  src="02.png"
+                  alt="스트레스 없이 건강한 섭취 습관 만드는 법"
+                  loading="lazy"
+                />
+                <span class="tag">MINDSET</span>
+              </div>
+              <span class="mag-meta">HEALTHY HABIT</span>
+              <span class="mag-title"
+                >스트레스 없이 건강한 섭취 습관 만드는 법</span
+              >
+            </a>
+            <a class="mag-card" href="#">
+              <div class="mag-thumb">
+                <img
+                  class="fill"
+                  src="03.png"
+                  alt="나만의 밸런스를 찾는 작은 루틴의 힘"
+                  loading="lazy"
+                />
+                <span class="tag">BALANCE</span>
+              </div>
+              <span class="mag-meta">DAILY GLOW</span>
+              <span class="mag-title">나만의 밸런스를 찾는 작은 루틴의 힘</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========================= 후기 ============================ -->
+       
+<section class="reviews" id="community">
+        <div class="wrap">
+          <div class="reviews-head">
+            <div>
+              <span class="eyebrow">Social Proof</span>
+              <h2>i'et와 함께한 이야기</h2>
+            </div>
+            <div class="rating">
+              <span class="num">4.9</span><span class="of5">/ 5.0</span>
+            </div>
+          </div>
+          <div class="review-track" id="review-track"></div>
+        </div>
+      </section>
+
+      <!-- ======================쿠폰======================== -->
+      <section class="promo">
+        <div class="wrap">
+          <h2>
+            지금 아이어트 멤버십 가입하고,<br />가벼운 시작을 위한
+            <em>10% 웰컴 쿠폰</em>을 받아보세요!
+          </h2>
+          <!-- 수정 ⭐ id 추가 (script.js에서 쿠폰 모달 열 때 사용) -->
+          <button
+            class="btn btn-primary"
+            id="coupon-btn"
+            aria-controls="coupon-modal"
+          >
+            웰컴 혜택 받기
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========== 쿠폰 발급 모달 ⭐ 추가 =============== -->
+    <div
+      class="coupon-modal"
+      id="coupon-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="coupon-title"
+      aria-hidden="true"
+    >
+      <div class="coupon-box">
+        <button class="coupon-close" id="coupon-close" aria-label="쿠폰 창 닫기">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <line x1="5" y1="5" x2="19" y2="19"></line>
+            <line x1="19" y1="5" x2="5" y2="19"></line>
+          </svg>
+        </button>
+        <div class="coupon-ticket">
+          <span class="coupon-percent">10%</span>
+          <span class="coupon-label">WELCOME COUPON</span>
+        </div>
+        <h3 id="coupon-title">쿠폰이 발급되었습니다!</h3>
+        <p class="coupon-desc">
+          마이페이지 &gt; 쿠폰함에서 확인할 수 있어요.
+        </p>
+        <button class="btn btn-primary coupon-ok" id="coupon-ok">확인</button>
+      </div>
+    </div>
+    <!-- ========================= 푸터 ========================== -->
+    <footer>
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <div class="footer-logo">i'et</div>
+            <p class="footer-contact">
+              CS 센터 1588-0000 (평일 10:00–18:00)<br />이메일
+              hello@iet-official.com<br />서울특별시 성동구 아이어트로 12
+            </p>
+          </div>
+          <div class="sns">
+            <a href="#" aria-label="인스타그램"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="0.6"
+                  fill="currentColor"
+                ></circle></svg
+            ></a>
+            <a href="#" aria-label="유튜브"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 8s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C16.4 4.5 12 4.5 12 4.5h0s-4.4 0-7.1.2c-.4.1-1.3.1-2.1 1C2.2 6.4 2 8 2 8S1.8 9.9 1.8 11.8v1.7C1.8 15.4 2 17.3 2 17.3s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.3.2 7.3.2s4.4 0 7.1-.2c.4-.1 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.2-1.9.2-3.8v-1.7C22.2 9.9 22 8 22 8z"
+                ></path>
+                <polygon
+                  points="10 15 15 12 10 9"
+                  fill="currentColor"
+                ></polygon></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 i'et. All rights reserved.</span>
+          <div class="footer-bottom-links">
+            <a href="#">이용약관</a>
+            <a class="strong" href="#">개인정보처리방침</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
